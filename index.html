@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./flexboxgrid.min.css">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js"></script>
+
+  <title>The Library</title>
+</head>
+<body>
+  <!-- 
+    Book Information will be displayed here.
+    A form to enable the user to add new books will replace
+    the current books information when the "Add New Book" btn is pressed" 
+  -->
+  <!-- Todo: Find a ID name for this -->
+  <aside>
+    <!-- This will display all of the current books information -->
+    <div id="book_display">
+      <div class="book_display--stats">
+        <span id="book_display--pageCount">Page Count: {PAGE_COUNT}</span>
+        <span id="book_display--read">Read: {READ_STATUS}</span>
+      </div>
+      <h3 id="book_display--title">{CURRENT_TITLE}</h3>
+      <h4 id="book_display--author">{CURRENT_AUTHOR}</h4>
+      <p id="book_display--description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam deserunt quisquam corrupti voluptas voluptatum accusamus quam, ducimus ipsam maiores tempore provident architecto saepe, incidunt nam sapiente veniam laborum, ab praesentium.</p>
+      
+      <div id="book_display--remove">Remove Book</div>
+    </div>
+
+    <!-- 
+      This will display a form for the user to enable them to add a new book
+      * The Add new book btn should be hidden when this form is displayed
+    -->
+    <div id="newbook-container">
+      <form id="newbook--form" action="">
+        <label for="newbook--title">Title: </label>
+        <input id ="newbook--title" type="text" required>
+
+        <label for="newbook--author">Author: </label>
+        <input id="newbook--author" type="text" required>
+
+        <label for="newbook--description">Description: </label>
+        <input id="newbook--description">
+
+        <label for="newbook--pagecount">Page Count: </label>
+        <input id="newbook--pagecount" type="number" min="1" required>
+
+        <label for="newbook--read">Read? </label>
+        <input id="newbook--read" type="checkbox" required>
+
+        <input id="newbook--submit" type="submit">
+      </form>
+    </div>
+  </aside>
+
+  <!-- 
+    This will allow trigger the form to appear and allow the user to add a new book
+    * This element will be fixed and float above all other elements 
+  -->
+  <div id="addBook--btn">Add Book</div>
+
+  <!-- This section will display all current books -->
+  <div id="bookshelf">
+    <div class="book">
+      <!-- Will only display title & author for now -->
+      <h3 class="book--title">{INSERT_TITLE}</h3>
+      <!-- TODO: Work on how you want to populate this -->
+      <h4 class="book--author">By: <span>{INSERT_AUTHOR}</span></h4>
+    </div>
+  </div>
+</body>
+</html>
