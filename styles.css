@@ -37,14 +37,128 @@ table {
 * {
   font-family: 'Caveat', cursive;
   color: #fff;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html, body {
-  overflow-x: hidden;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
   font-family: 'Caveat', cursive;
   font-size: 16px;
   font-weight: 400;
+  background-color: #323232;
+}
+
+.hide {
+  display: none !important;
+}
+
+.outline-r {
+  outline: 1px solid red;
+}
+
+.outline-g {
+  outline: 1px solid green;
+}
+
+.outline-b {
+  outline: 1px solid blue;
+}
+
+#book_aside {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  width: 25%;
+  overflow: hidden;
+}
+
+#bookshelf {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  width: 74.5%;
+  overflow: hidden;
+}
+
+#bookshelf-grid::-webkit-scrollbar {
+  display: none;
+}
+
+#bookshelf-grid {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 60px 60px;
+  place-items: center;
+  -ms-flex-line-pack: start;
+      align-content: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 75px;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.book::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #1d7268;
+  height: 100%;
+  width: 15%;
+  margin-left: -18%;
+}
+
+.book::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 30px;
+  border: 1px solid #1d7268;
+  height: 9%;
+  width: 110%;
+  margin-left: -15%;
+  bottom: 1px;
+  background-color: #cecedd;
+  background-size: 2px 2px;
+  background-image: repeating-linear-gradient(0deg, #aaaaaa, #aaaaaa 0.4px, #e5e5f7 0.4px, #e5e5f7);
+}
+
+.book {
+  position: relative;
   background-color: #2a9d8f;
+  padding-left: 15%;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 350px;
+  width: 260px;
+}
+
+.book--title {
+  font-size: 2.9rem;
+  margin-top: 40px;
+  margin-left: 20px;
+  text-indent: -15px;
+}
+
+.book--author {
+  font-size: 1.2rem;
+  text-align: right;
+  padding-right: 20px;
+  margin-top: 25px;
 }
 
 @media screen and (min-width: 768px) {

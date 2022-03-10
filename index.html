@@ -18,7 +18,7 @@
     the current books information when the "Add New Book" btn is pressed" 
   -->
   <!-- Todo: Find a ID name for this -->
-  <aside>
+  <aside id="book_aside" class="outline-r">
     <!-- This will display all of the current books information -->
     <div id="book_display">
       <div class="book_display--stats">
@@ -36,41 +36,71 @@
       This will display a form for the user to enable them to add a new book
       * The Add new book btn should be hidden when this form is displayed
     -->
-    <div id="newbook-container">
-      <form id="newbook--form" action="">
-        <label for="newbook--title">Title: </label>
-        <input id ="newbook--title" type="text" required>
+    <form id="book_form" action="" class="hide">
+      <label for="book_form--title">Title: </label>
+      <input id ="book_form--title" type="text" required>
 
-        <label for="newbook--author">Author: </label>
-        <input id="newbook--author" type="text" required>
+      <label for="book_form--author">Author: </label>
+      <input id="book_form--author" type="text" required>
 
-        <label for="newbook--description">Description: </label>
-        <input id="newbook--description">
+      <label for="book_form--description">Description: </label>
+      <input id="book_form--description">
 
-        <label for="newbook--pagecount">Page Count: </label>
-        <input id="newbook--pagecount" type="number" min="1" required>
+      <label for="book_form--pagecount">Page Count: </label>
+      <input id="book_form--pagecount" type="number" min="1" required>
 
-        <label for="newbook--read">Read? </label>
-        <input id="newbook--read" type="checkbox" required>
+      <label for="book_form--read">Read? </label>
+      <input id="book_form--read" type="checkbox" required>
 
-        <input id="newbook--submit" type="submit">
-      </form>
-    </div>
+      <input id="book_form--submit" type="submit">
+    </form>
   </aside>
 
   <!-- 
     This will allow trigger the form to appear and allow the user to add a new book
     * This element will be fixed and float above all other elements 
   -->
-  <div id="addBook--btn">Add Book</div>
+  <div id="addBook--btn" class="hide">Add Book</div>
 
   <!-- This section will display all current books -->
-  <div id="bookshelf">
-    <div class="book">
-      <!-- Will only display title & author for now -->
-      <h3 class="book--title">{INSERT_TITLE}</h3>
-      <!-- TODO: Work on how you want to populate this -->
-      <h4 class="book--author">By: <span>{INSERT_AUTHOR}</span></h4>
+  <div id="bookshelf" class="outline-b">
+    <div id="bookshelf-grid">
+      <div class="book" id="book">
+        <!-- Will only display title & author for now -->
+        <h3 class="book--title" id="book--title">Eloquent Javascript</h3>
+        <!-- TODO: Work on how you want to populate this -->
+        <h4 class="book--author">By: <span id="book--author">Marijm Haverbeke</span></h4>
+      </div>
+
+      <div class="book">
+        <h3 class="book--title">{BOOK_2}</h3>
+        <h4 class="book--author">By: <span>{INSERT_AUTHOR}</span></h4>
+      </div>
+
+      <div class="book">
+        <h3 class="book--title">{BOOK_3}</h3>
+        <h4 class="book--author">By: <span>{INSERT_AUTHOR}</span></h4>
+      </div>
+
+      <div class="book">
+        <h3 class="book--title">{BOOK_4}</h3>
+        <h4 class="book--author">By: <span>{INSERT_AUTHOR}</span></h4>
+      </div>
+
+      <div class="book">
+        <h3 class="book--title">{BOOK_5}</h3>
+        <h4 class="book--author">By: <span>{INSERT_AUTHOR}</span></h4>
+      </div>
+      
+      <div class="book">
+        <h3 class="book--title">{BOOK_6}</h3>
+        <h4 class="book--author">By: <span>{INSERT_AUTHOR}</span></h4>
+      </div>
+      
+      <div class="book">
+        <h3 class="book--title">{BOOK_6}</h3>
+        <h4 class="book--author">By: <span>{INSERT_AUTHOR}</span></h4>
+      </div>
     </div>
   </div>
 </body>
