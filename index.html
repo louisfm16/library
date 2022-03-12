@@ -7,7 +7,6 @@
 
   <link rel="stylesheet" href="./flexboxgrid.min.css">
   <link rel="stylesheet" href="./styles.css">
-  <script src="./app.js"></script>
 
   <title>The Library</title>
 </head>
@@ -18,15 +17,16 @@
     the current books information when the "Add New Book" btn is pressed" 
   -->
   <!-- Todo: Find a ID name for this -->
-  <aside id="book_aside" class="outline-r">
+  <aside id="book_aside">
     <!-- This will display all of the current books information -->
     <div id="book_display">
       <div class="book_display--stats">
-        <span id="book_display--pageCount">Page Count: {PAGE_COUNT}</span>
-        <span id="book_display--read">Read: {READ_STATUS}</span>
+        <span id="book_display--read">Read: True</span><!-- * Whitespace fix
+     --><span id="book_display--pageCount">Page Count: 347</span>
       </div>
-      <h3 id="book_display--title">{CURRENT_TITLE}</h3>
-      <h4 id="book_display--author">{CURRENT_AUTHOR}</h4>
+
+      <h3 id="book_display--title">Eloquent Javascript</h3>
+      <h4 id="book_display--author">Marijm Haverbeke</h4>
       <p id="book_display--description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam deserunt quisquam corrupti voluptas voluptatum accusamus quam, ducimus ipsam maiores tempore provident architecto saepe, incidunt nam sapiente veniam laborum, ab praesentium.</p>
       
       <div id="book_display--remove">Remove Book</div>
@@ -63,11 +63,11 @@
   <div id="addBook--btn" class="hide">Add Book</div>
 
   <!-- This section will display all current books -->
-  <div id="bookshelf" class="outline-b">
+  <div id="bookshelf">
     <div id="bookshelf-grid">
-      <div class="book" id="book">
+      <div class="book">
         <!-- Will only display title & author for now -->
-        <h3 class="book--title" id="book--title">Eloquent Javascript</h3>
+        <h3 class="book--title">Eloquent Javascript</h3>
         <!-- TODO: Work on how you want to populate this -->
         <h4 class="book--author">By: <span id="book--author">Marijm Haverbeke</span></h4>
       </div>
@@ -103,5 +103,7 @@
       </div>
     </div>
   </div>
+
+  <script src="./app.js"></script>
 </body>
 </html>

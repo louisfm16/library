@@ -72,11 +72,68 @@ html, body {
 }
 
 #book_aside {
+  background-color: #292929;
   position: relative;
   display: inline-block;
   height: 100%;
   width: 25%;
   overflow: hidden;
+  padding: 25px 20px;
+}
+
+#book_display {
+  display: block;
+  position: relative;
+  height: 100%;
+}
+
+#book_display > .book_display--stats {
+  position: relative;
+  font-size: 1.5rem;
+  margin-bottom: 70px;
+}
+
+#book_display--read {
+  display: inline-block;
+  width: 50%;
+}
+
+#book_display--pageCount {
+  display: inline-block;
+  width: 50%;
+  text-align: right;
+}
+
+#book_display--title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+#book_display--author::before {
+  content: "- ";
+  position: absolute;
+  margin-left: -15px;
+}
+
+#book_display--author {
+  font-size: 1.5rem;
+  margin: 15px 0;
+  padding-left: 40px;
+}
+
+#book_display--description {
+  font-size: 1.4rem;
+  margin-top: 50px;
+}
+
+#book_display--remove {
+  outline: 1px solid blue;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 2.2rem;
+  text-align: center;
+  line-height: 60px;
 }
 
 #bookshelf {
@@ -116,10 +173,11 @@ html, body {
   content: "";
   display: block;
   position: absolute;
-  background-color: #1d7268;
+  background-color: #1d1d1d;
   height: 100%;
   width: 15%;
   margin-left: -18%;
+  opacity: 0.5;
 }
 
 .book::after {

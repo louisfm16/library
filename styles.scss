@@ -46,11 +46,70 @@ html, body {
 
 // Container for the selected book info & add new book form
 #book_aside {
+  background-color: #292929;
   position: relative;
   display: inline-block;
   height: 100%;
   width: 25%;
   overflow: hidden;
+  padding: 25px 20px;
+}
+
+#book_display {
+  display: block;
+  position: relative;
+  height: 100%;
+
+  & > .book_display--stats {
+    position: relative;
+    font-size: 1.5rem;
+    margin-bottom: 70px;
+  }
+  // * Begin Within .book_display--stats
+  &--read {
+    display: inline-block;
+    width: 50%;
+  }
+
+  &--pageCount {
+    display: inline-block;
+    width: 50%;
+    text-align: right;
+  }
+  // * End Within .book_display--stats
+
+  &--title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  &--author::before {
+    content: "- ";
+    position: absolute;
+    margin-left: -15px;
+  }
+
+  &--author {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    padding-left: 40px;
+  }
+
+  &--description {
+    font-size: 1.4rem;
+    margin-top: 50px;
+  }
+
+  &--remove {
+    outline: 1px solid blue;
+    position: absolute;
+    bottom: 0;
+    // height: 50px;
+    width: 100%;
+    font-size: 2.2rem;
+    text-align: center;
+    line-height: 60px;
+  }
 }
 
 #bookshelf {
@@ -59,10 +118,6 @@ html, body {
   height: 100%;
   width: 74.5%;
   overflow: hidden;
-
-  // overflow-y: scroll;
-  // padding-right: 17px;
-  // box-sizing: content-box;
 }
 
 // Hide scroll bar
@@ -92,10 +147,11 @@ html, body {
   content: "";
   display: block;
   position: absolute;
-  background-color: #1d7268;
+  background-color: #1d1d1d;
   height: 100%;
   width: 15%;
   margin-left: -18%;
+  opacity: 0.5;
 }
 
 .book::after {
@@ -132,7 +188,6 @@ html, body {
   }
 
   &--author {
-    // outline: 1px solid blue;
     font-size: 1.2rem;
     text-align: right;
     padding-right: 20px;
