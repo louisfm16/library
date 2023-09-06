@@ -1,13 +1,18 @@
 // NEWBEDEV.com CSS Reset
-a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+// a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
 
-$primary-color: #000;
-$secondary-color: #000;
-$text-color: #fff;
+$background: #16161a;
+$sec-background: #242629;
+$secondary: #72757e;
+$tertiary: #2cb67d;
+$button: #2cb67d;
+$paragraph: #94a1b2;
+$headline: #fffffe; // btn-text
+$stroke: #010101;
 
 * {
-  font-family: 'Caveat', cursive;
-  color: $text-color;
+  // font-family: 'Caveat', cursive;
+  color: $headline;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -19,10 +24,10 @@ html, body {
   position: relative;
   height: 100vh;
   width: 100vw;
-  font-family: 'Caveat', cursive;
-  font-size: 16px;
-  font-weight: 400;
-  background-color: #323232;
+  // font-family: 'Caveat', cursive;
+  // font-size: 16px;
+  // font-weight: 400;
+  background-color: $background;
 }
 
 // * Helper class, remove after release
@@ -43,23 +48,72 @@ html, body {
 }
 
 /*
-  // Styling code here
+  Styling code here
 */
+#app {
+  // padding-left: 350px !important;
+  // padding-right: 350px !important;
+}
 
-@media screen and (min-width: 768px){
-  html, body {
-    font-size: 16px;
+#title {
+  &--container {
+    text-align: center;
+  }
+
+  &--headline {
+    // outline: 1px solid pink;
   }
 }
 
-@media screen and (min-width: 1200px){
-  html, body {
-    font-size: 18px;
+#dashboard {
+  &--container {
+    margin-top: 40px;
+    height: 680px;
+    border-radius: 25px;
+    background-color:$sec-background;
+    outline: 1px solid $stroke;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+
+    & .row {
+      height: 100%;
+      padding: 20px 10px 20px 10px;
+
+      // Column container, just make a class dude!
+      & .panels { 
+        height:100%;
+        border-radius: 25px;
+        background-color: $background;
+        outline: 1px solid $stroke;
+        box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+      }
+    }
+  }
+
+  &--aside {
+    
+  }
+
+  &--main {
+    & .grid {
+      display: grid;
+    }
   }
 }
 
-@media screen and (min-width: 1600px){
-  html, body {
-    font-size: 20px;
-  }
-}
+// @media screen and (min-width: 768px){
+//   html, body {
+//     font-size: 16px;
+//   }
+// }
+
+// @media screen and (min-width: 1200px){
+//   html, body {
+//     font-size: 18px;
+//   }
+// }
+
+// @media screen and (min-width: 1600px){
+//   html, body {
+//     font-size: 20px;
+//   }
+// }

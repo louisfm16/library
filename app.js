@@ -33,16 +33,16 @@ docReady(function () {
   // renderBooksInLibrary();
 });
 
-function Book(title, author, pageCount, isRead) {
+function Book(title, author, pages, read) {
   // the constructor...
-  // this.title = title;
-  // this.author = author;
-  // this.pageCount = pageCount;
-  // this.isRead = isRead;
+  this.title = title;
+  this.author = author;
+  this.pages = pages;
+  this.read = read;
 
-  // this.info = function() {
-  //   return `${this.title} by ${this.author}, ${this.pageCount} pages, ${this.isRead ? 'already read' : 'not read yet'}`;
-  // }
+  this.info = function() {
+    return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read ? 'already read' : 'not read yet'}`;
+  }
 }
 
 function addBookToLibrary() {
