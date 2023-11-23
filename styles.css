@@ -73,6 +73,12 @@ html, body {
 .book--item-pages {
   color: #94a1b2;
 }
+.book--item-pages i {
+  color: inherit;
+  font-size: 85%;
+  font-style: normal;
+  opacity: 0.8;
+}
 .book--item-buttons {
   position: relative;
   height: 30px;

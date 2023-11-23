@@ -124,6 +124,13 @@ html, body {
 
     &-pages {
       color: $paragraph;
+
+      & i {
+        color: inherit;
+        font-size: 85%;
+        font-style: normal;
+        opacity: 0.8;
+      }
     }
 
     &-buttons {

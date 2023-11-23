@@ -16,6 +16,18 @@ let myLibrary = [
     author: 'Sean Adams',
     pageCount: 256,
     isRead: false
+  },
+  {
+    title: 'Dracula',
+    author: 'Bram Stoker',
+    pageCount: 418,
+    isRead: false
+  },
+  {
+    title: 'Masonry',
+    author: 'William Schnoebelen',
+    pageCount: 286,
+    isRead: false
   }
 ];
 
@@ -107,7 +119,8 @@ function CreateBook(book) {
   // Attach the current book data to the book elements
   title.textContent = book.title;
   author.textContent = book.author;
-  pages.textContent = book.pages;
+  // pages.textContent = `${book.pageCount} pg\'s`;
+  pages.innerHTML = `${book.pageCount} <i>pg\'s</i>`;
   isReadLabel.textContent = 'Read';
   deleteBtn.textContent = 'Delete';
   
