@@ -1,29 +1,34 @@
 let myLibrary = [
   {
+    id: getUID(),
     title: 'Eloquent Javascript',
     author: 'Marijm Haverbeke',
     pageCount: 450,
     isRead: false
   },
   {
+    id: getUID(),
     title: 'CSS Secrets',
     author: 'Lea Verou',
     pageCount: 354,
     isRead: true
   },
   {
+    id: getUID(),
     title: 'The Designer\'s Dictionary of color',
     author: 'Sean Adams',
     pageCount: 256,
     isRead: false
   },
   {
+    id: getUID(),
     title: 'Dracula',
     author: 'Bram Stoker',
     pageCount: 418,
-    isRead: false
+    isRead: true
   },
   {
+    id: getUID(),
     title: 'Masonry',
     author: 'William Schnoebelen',
     pageCount: 286,
@@ -125,9 +130,10 @@ function CreateBook(book) {
   deleteBtn.textContent = 'Delete';
   
   // Create the book body attributes & set them
-  //E dit these attributes to display if a book was read or not
-  let isReadInputAttributes = {type:'checkbox',name:'options-outlined',id:'success-outlined',autocomplete:'off'};
-  let isReadLabelAttributes = {for:'success-outlined'};
+  // Edit these attributes to display if a book was read or not
+  let isReadInputAttributes = {type:'checkbox',name:'options-outlined',id:`success-outlined-${book.id}`,autocomplete:'off'};
+  if (book.isRead) {isReadInputAttributes.checked="checked"}
+  let isReadLabelAttributes = {for:`success-outlined-${book.id}`};
   let deleteBtnAttributes = {type:'button'};
   setAttributes(isReadInput, isReadInputAttributes);
   setAttributes(isReadLabel, isReadLabelAttributes);
@@ -147,3 +153,11 @@ function setAttributes(element, attributes) {
     element.setAttribute(attr, attributes[attr]);
   });
 }
+
+function getUID() {
+  return `id${Math.random().toString(16).slice(2)}`
+}
+
+// Create a function(s) to add or remove the "checked" attribute from existing books
+// Or better yet,
+// Create an EventListener to update the book db when the Read checkbox is checked/unchecked
