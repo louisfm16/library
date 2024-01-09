@@ -72,6 +72,8 @@ html, body {
 }
 .book--item-pages {
   color: #94a1b2;
+  margin-top: 15px;
+  margin-bottom: 0;
 }
 .book--item-pages i {
   color: inherit;
@@ -80,20 +82,24 @@ html, body {
   opacity: 0.8;
 }
 .book--item-buttons {
-  position: relative;
+  position: absolute;
   height: 30px;
-  width: 100%;
+  width: 85%;
   margin: 0;
-  margin-top: 25px;
   padding: 0;
+  left: 50%;
+  bottom: 8%;
+  transform: translateX(-50%);
 }
 .book--item-isRead {
-  position: absolute;
-  left: 5px;
-  bottom: 0;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  margin-right: 45px;
+  padding: 0;
 }
 .book--item-delete {
-  position: absolute;
-  right: 5px;
-  bottom: 0;
+  position: relative;
+  display: inline-block;
+  margin: 0;
 }/*# sourceMappingURL=styles.css.map */

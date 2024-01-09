@@ -124,6 +124,8 @@ html, body {
 
     &-pages {
       color: $paragraph;
+      margin-top: 15px;
+      margin-bottom: 0;
 
       & i {
         color: inherit;
@@ -134,31 +136,29 @@ html, body {
     }
 
     &-buttons {
-      position: relative;
-      // display: block;
+      position: absolute;
       height: 30px;
-      // font-size: 1rem;
-      // font-weight: 400;
-      // line-height: 1.5;
-      width: 100%;
+      width: 85%;
       margin: 0;
-      margin-top: 25px;
+      padding: 0;
+      left: 50%;
+      bottom: 8%;
+      transform: translateX(-50%);
+    }
+
+
+    &-isRead {
+      position: relative;
+      display: inline-block;
+      margin: 0;
+      margin-right: 45px;
       padding: 0;
     }
 
-
-    // Floating both buttons works for now but,
-    // I don't like it
-    &-isRead {
-      position: absolute;
-      left: 5px;
-      bottom: 0;
-    }
-
     &-delete {
-      position: absolute;
-      right: 5px;
-      bottom: 0;
+      position: relative;
+      display: inline-block;
+      margin: 0;
     }
   }
 }
